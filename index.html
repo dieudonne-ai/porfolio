@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dieudonne Bahati • Portfolio</title>
+  <link rel="stylesheet" href="static/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="Dieudonne Bahati home">
+        <span class="logo-dot"></span>
+        Dieudonne Bahati
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="pages/about.html">About</a>
+        <a href="pages/skills.html">Skills</a>
+        <a href="pages/projects.html">Projects</a>
+        <a href="pages/education.html">Education</a>
+        <a href="pages/experience.html">Experience</a>
+        <a href="pages/gallery.html">Gallery</a>
+        <a href="pages/contact.html">Contact</a>
+      </nav>
+      <button class="mobile-toggle" id="menuBtn" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M3 12h18M3 6h18M3 18h18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero-section">
+      <div class="container">
+       <h1>Hi, I’m Dieudonne Bahati</h1>
+        <p>Computer Science student creating modern data solutions. I build clean data pipelines, tested APIs and systems that scale.</p>
+        <div class="hero-buttons">
+          <a href="pages/projects.html" class="btn">See Projects</a>
+          <a href="pages/contact.html" class="btn btn-alt">Contact Me</a>
+        </div>
+      </div>
+    </section>
+
+
+  <footer class="site-footer">
+    <div class="container">© 2026 Dieudonne Bahati • Computer Science Student</div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mainNav = document.getElementById('mainNav');
+    menuBtn.addEventListener('click', () => mainNav.classList.toggle('open'));
+  </script>
+</body>
+</html>
