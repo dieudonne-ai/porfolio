@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
-
 /* Neumorphic theme: soft grey surface, light + dark shadows, rounded corners */
 :root {
   --bg: #e4e5ea;
@@ -24,11 +22,21 @@ html { scroll-behavior: smooth; }
 body {
   font-family: "Montserrat", "Segoe UI", sans-serif;
   color: var(--text);
-  background: var(--bg) url("../assets/topo.svg") center / cover no-repeat fixed;
+  background: var(--bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   line-height: 1.6;
+}
+
+/* Fixed layer instead of background-attachment: fixed, which repaints on every scroll */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("../assets/topo.svg") center / cover no-repeat;
+  pointer-events: none;
 }
 
 main { flex: 1; }
@@ -278,6 +286,7 @@ ul {
   display: block;
   width: 100%;
   border-radius: var(--radius-sm);
+  height: auto;
   object-fit: cover;
   margin-bottom: 0.8rem;
   padding: 6px;
